@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "jsonui-scripting": "^2.3.3"
+  },
+  "scripts": {
+    "build": "tsc && node ./dist/cjs/app.js"
+  },
+  "license": "MIT"
+}
