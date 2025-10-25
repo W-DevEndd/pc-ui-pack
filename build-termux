@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+DIRNAME=$(dirname "$0")
+buildDir="/sdcard/archives/.pcui"
+
+cd $DIRNAME
+
+yarn build
+
+rm -rf "$buildDir"
+mkdir "$buildDir"
+
+cp -r "./.build/" "$buildDir"

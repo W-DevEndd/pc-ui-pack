@@ -5,7 +5,7 @@
 const config = {
     compiler: {
         autoCompress: false,
-        fileExtension: "json",
+        fileExtension: "class",
         encodeJson: false,
         UI: {
             nameLength: 32,
@@ -20,11 +20,13 @@ const config = {
         developEvironment: true,
         previewVersion: false,
         customPath: false,
-        installPath: "/your/minecraft/data/path",
+        installPath: '/abc/xyz/',
     },
     manifest: {
-        name: "Standalone Controls [DEV]",
+        name: "Endd's PC UI [DEV]",
         description: "Build with JsonUI Scripting <3",
+        baseGameVersion: [1, 21, 80],
+        version: [1]
     },
 };
 
