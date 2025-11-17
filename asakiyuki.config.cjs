@@ -16,11 +16,11 @@ const config = {
         },
     },
     installer: {
-        autoInstall: true,
+        autoInstall: false,
         developEvironment: true,
         previewVersion: false,
         customPath: false,
-        installPath: '/abc/xyz/',
+        installPath: '/sdcard/archives/.pcui',
     },
     manifest: {
         name: "Endd's PC UI [DEV]",
