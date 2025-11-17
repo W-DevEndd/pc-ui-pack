@@ -1,12 +1,13 @@
 {
   "dependencies": {
-    "jsonui-scripting": "^2.3.3"
+    "asajs": "^3.0.10"
   },
   "scripts": {
     "build": "tsc && node ./dist/cjs/app.js"
   },
   "license": "GPL-3.0-only",
   "devDependencies": {
-    "@types/node": "^24.3.1"
+    "@types/node": "^24.3.1",
+    "typescript": "^5.9.3"
   }
 }

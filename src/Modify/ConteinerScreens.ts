@@ -1,7 +1,7 @@
 import {
   UI, Modify,
   BindingType,
-} from "jsonui-scripting";
+} from "asajs";
 
 Modify.register("ui/inventory_screen.json", "container_cell_images/cell_selected").override.setProperties({
   ignored: true,

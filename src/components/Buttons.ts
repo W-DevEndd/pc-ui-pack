@@ -2,7 +2,7 @@ import { Common } from "./Common";
 import {
   UI,
   Anchor,
-} from "jsonui-scripting";
+} from "asajs";
 
 export class Buttons {
   static touchButtonControlDefault = UI.panel({

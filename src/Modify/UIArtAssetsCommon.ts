@@ -1,4 +1,4 @@
-import { Modify } from "jsonui-scripting";
+import { Modify } from "asajs";
 
 Modify.register("ui/ui_art_assets_common.json", "start_title_panel_content").override
   .addVariables({

@@ -14,18 +14,23 @@ adm-zip@^0.5.16:
   resolved "https://registry.yarnpkg.com/adm-zip/-/adm-zip-0.5.16.tgz#0b5e4c779f07dedea5805cdccb1147071d94a909"
   integrity sha512-TGw5yVi4saajsSEgz25grObGHEUaDrniwvA2qwSC060KfqGPdglhvPMA2lPIoxs3PQIItj2iag35fONcQqgUaQ==
 
+asajs@^3.0.10:
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/asajs/-/asajs-3.0.10.tgz#91b71c4acd1a4e5c707977d70fe6e042a2494552"
+  integrity sha512-TWxfiJn6WCDhWWEHsDSfm600zuWGRALNAV5Sqet5zWVWxiKhKai4cvW+SXjPQYyDFSfx8ouAuVbl1+nbj4+tEw==
+  dependencies:
+    adm-zip "^0.5.16"
+    jsonc-parser "^3.3.1"
+
 jsonc-parser@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-3.3.1.tgz#f2a524b4f7fd11e3d791e559977ad60b98b798b4"
   integrity sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==
 
-jsonui-scripting@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/jsonui-scripting/-/jsonui-scripting-2.3.3.tgz#e6fed67003334af04ae04723aa2297dfdc1c7c5a"
-  integrity sha512-58pWfOOJbAWZ6AfyaLRq0/EzKI+SvT/wz/orSbJUqktNCRNMCDccVQYjIFi1dtlNg5jrCTLWIIlvJNL08ZJKTg==
-  dependencies:
-    adm-zip "^0.5.16"
-    jsonc-parser "^3.3.1"
+typescript@^5.9.3:
+  version "5.9.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.9.3.tgz#5b4f59e15310ab17a216f5d6cf53ee476ede670f"
+  integrity sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==
 
 undici-types@~7.10.0:
   version "7.10.0"

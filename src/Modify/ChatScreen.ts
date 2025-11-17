@@ -2,7 +2,7 @@ import { Buttons } from "../components/Buttons";
 import {
   Modify, UI,
   Orientation, Anchor, MappingTo,
-} from "jsonui-scripting";
+} from "asajs";
 
 const screen = "ui/chat_screen.json";
 

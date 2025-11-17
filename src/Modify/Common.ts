@@ -2,7 +2,7 @@ import { Buttons } from "../components/Buttons";
 import {
   UI, Modify,
   Anchor
-} from "jsonui-scripting";
+} from "asajs";
 
 const currentFile = "ui/ui_common.json";
 

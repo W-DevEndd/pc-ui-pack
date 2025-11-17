@@ -3,7 +3,7 @@ import { Buttons } from "../components/Buttons";
 import {
   Modify, UI, Random,
   BindingType, BindingName, Anchor, MappingTo, Orientation,
-} from "jsonui-scripting";
+} from "asajs";
 const screen = "ui/hud_screen.json";
 
 Modify.register(screen, "hotbar_chooser/pocket_hotbar").override.setProperties({

@@ -1,5 +1,5 @@
 import { Buttons } from "./Buttons";
-import { UI } from "jsonui-scripting";
+import { UI } from "asajs";
 
 export class Common {
   static globalText = UI.label({
