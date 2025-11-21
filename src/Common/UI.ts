@@ -11,4 +11,4 @@ Vanilla.common.scrollBox_box_mouseBox({ ignored: false });
 Vanilla.common.highlightSlotPanel_highlight().override.addBindings();
 Vanilla.common.highlightSlotPanel_whiteBorder().override.addBindings();
 Vanilla.common.selectedItemDetailsFactory({ ignored: true });
-Vanilla.common.pocketUiContainerSlot_hover_highlightSquare({ ignored: true });
+Vanilla.common.slotSelected({ ignored: true });
