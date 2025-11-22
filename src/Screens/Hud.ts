@@ -1,4 +1,4 @@
-import { Vanilla } from "asajs";
+import { BindingName, BindingType, Vanilla } from "asajs";
 
 // ---
 // Touch Padding
@@ -13,3 +13,6 @@ Vanilla.hud.itemNameTextRoot_itemTextAligner_interactPadding({ ignored: true });
 
 Vanilla.hud.hotbarPanel_hotbarElipsesPanelLeft({ ignored: true });
 Vanilla.hud.hotbarPanel_hotbarElipsesPanelRight({ ignored: true });
+
+Vanilla.hud.centeredGuiElementsAtBottomMiddleTouch({ ignored: true });
+Vanilla.hud.centeredGuiElementsAtBottomMiddle().override.addBindings();
