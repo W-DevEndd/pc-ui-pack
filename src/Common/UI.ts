@@ -28,7 +28,7 @@ export class UICommon {
         prevent_touch_input: true,
         sound_name: "none",
 
-        "$endd_pc_ui_dev_mode": true,
+        "$endd_pc_ui_dev_mode|default": true,
     }).addChild(
 
             UI.image({
