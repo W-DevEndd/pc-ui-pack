@@ -28,17 +28,17 @@ export class UICommon {
         prevent_touch_input: true,
         sound_name: "none",
 
-        "$endd_dev": true,
+        "$endd_pc_ui_dev_mode": true,
     }).addChild(
 
             UI.image({
-                ignored: "(not $endd_dev)",
+                ignored: "(not $endd_pc_ui_dev_mode)",
                 texture: "textures/ui/focus_border_white",
             }),
         0, "default").addChild(
             
             UI.image({
-                ignored: "(not $endd_dev)",
+                ignored: "(not $endd_pc_ui_dev_mode)",
                 texture: "textures/ui/focus_border_selected",
         }),
     0, "highlighted");
