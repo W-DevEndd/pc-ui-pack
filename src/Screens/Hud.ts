@@ -12,6 +12,12 @@ Vanilla.hud.itemNameTextRoot_itemTextAligner_interactPadding({ ignored: true });
 // Hotbar
 // ---
 
+const invButton = UI.extend<Types.Button, UI<Types.Button>>(
+    UICommon.invisibleButton, {
+        "$pressed_button_name": MappingTo.HotbarInventoryButton,
+    }
+);
+
 Vanilla.hud.hotbarPanel_hotbarElipsesPanelLeft({ ignored: true });
 Vanilla.hud.hotbarPanel_hotbarElipsesPanelRight({ ignored: true });
 
@@ -40,13 +46,12 @@ Vanilla.hud.rootPanel().modify.controls.replace(
 ).insertFront(
     UI.panel({
         anchor: Anchor.BottomMiddle,
-        size: [200, 22],
-        offset: [22, 0],
-    }).addChild(
-        UI.extend(UICommon.invisibleButton, {
-            "$pressed_button_name": MappingTo.HotbarInventoryButton,
+        size: [180, 22],
+        offset: [24, -1],
+    }).addChild<Types.Button, UI<Types.Button>>(
+        invButton, {
             size: ["100%y", "100%"],
             anchor: Anchor.RightMiddle,
-        })
+        }
     )
 )
