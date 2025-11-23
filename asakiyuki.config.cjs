@@ -11,6 +11,7 @@ const config = {
             nameLength: 32,
             namespaceAmount: 1,
             namespaceLength: 32,
+            optimizeControls: false,
             obfuscateName: true,
             obfuscateType: true,
         },
@@ -26,7 +27,7 @@ const config = {
         name: "Endd's PC UI [DEV]",
         description: "Build with JsonUI Scripting <3",
         baseGameVersion: [1, 21, 80],
-        version: [1]
+        version: [1, 0, 0],
     },
 };
 

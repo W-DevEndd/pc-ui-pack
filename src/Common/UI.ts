@@ -1,4 +1,4 @@
-import { Vanilla } from "asajs";
+import { Modify, Types, UI, Vanilla } from "asajs";
 
 // Scroll
 Vanilla.common.scrollingPanel_scrollTouch({ ignored: true });
@@ -12,3 +12,31 @@ Vanilla.common.highlightSlotPanel_highlight().override.addBindings();
 Vanilla.common.highlightSlotPanel_whiteBorder().override.addBindings();
 Vanilla.common.selectedItemDetailsFactory({ ignored: true });
 Vanilla.common.slotSelected({ ignored: true });
+
+export class UICommon {
+    static invisibleButton = UI.extend<
+        Types.Button, Modify<Types.Button, string>
+    >(Vanilla.common.button(), {
+        default_control: "",
+        hover_control: "default",
+        pressed_control: "highlighted",
+        locked_control: "",
+
+        prevent_touch_input: true,
+
+        "$endd_dev": true,
+    }).addChild(
+
+            UI.image({
+                ignored: "(not $endd_dev)",
+                texture: "textures/ui/focus_border_white",
+            }),
+        0, "default").addChild(
+            
+            UI.image({
+                ignored: "(not $endd_dev)",
+                texture: "textures/ui/focus_border_selected",
+        }),
+    0, "highlighted");
+
+}
