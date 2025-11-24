@@ -65,7 +65,7 @@ Vanilla.hud.hudContent().modify.controls.insertFront(
 ).insertFront<UI<Types.Button>>(
     invButton, {
         ignored: "(not $endd_pcui_extra_buttons)",
-        size: ["100%y", "10%"],
+        size: ["100%y", "15%"],
         anchor: Anchor.BottomRight,
     }
 ).insertFront(
