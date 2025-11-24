@@ -84,4 +84,16 @@ Vanilla.hud.hudContent().modify.controls.insertFront(
             size: ["100%y", "100%"],
         }
     )
+).insertFront<UI<Types.Button>>(
+    hidehudButton, {
+        ignored: "(not $endd_pcui_extra_buttons)",
+        size: ["20%", "100%x"],
+        anchor: Anchor.TopRight,
+    }
+).insertFront<UI<Types.Button>>(
+    hidepaperdollButton, {
+        ignored: "(not $endd_pcui_extra_buttons)",
+        size: ["20%", "100%x"],
+        anchor: Anchor.TopLeft,
+    }
 )
