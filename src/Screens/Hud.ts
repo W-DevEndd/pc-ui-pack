@@ -1,5 +1,16 @@
-import { Anchor, BindingName, BindingType, MappingTo, Modify, Random, Types, UI, Vanilla } from "asajs";
+import { Anchor, BindingName, BindingType, MappingTo, Modify, Orientation, Random, Types, UI, Vanilla } from "asajs";
 import { UICommon } from "../Common/UI";
+
+// ---
+// Assates
+// ---
+
+const invButton = UICommon.quickInvsibleButton(MappingTo.HotbarInventoryButton);
+const hotbarRightButton = UICommon.quickInvsibleButton(MappingTo.HotbarInventoryRight);
+const HotbarLeftButton = UICommon.quickInvsibleButton(MappingTo.HotbarInventoryLeft);
+
+const hidehudButton = UICommon.quickInvsibleButton(MappingTo.HideGuiAll);
+const hidepaperdollButton = UICommon.quickInvsibleButton(MappingTo.HidePaperdollHud);
 
 // ---
 // Touch Padding
@@ -12,11 +23,6 @@ Vanilla.hud.itemNameTextRoot_itemTextAligner_interactPadding({ ignored: true });
 // Hotbar
 // ---
 
-const invButton = UI.extend<Types.Button, UI<Types.Button>>(
-    UICommon.invisibleButton, {
-        "$pressed_button_name": MappingTo.HotbarInventoryButton,
-    }
-);
 
 Vanilla.hud.hotbarPanel_hotbarElipsesPanelLeft({ ignored: true });
 Vanilla.hud.hotbarPanel_hotbarElipsesPanelRight({ ignored: true });
@@ -43,7 +49,9 @@ Modify.registerWithNamespace<Types.Panel, string>(
 Vanilla.hud.rootPanel().modify.controls.replace(
     "centered_gui_elements_at_bottom_middle_touch",
     newCenteredGuiElementsAtBottomMiddleForTouchName,
-).insertFront(
+)
+
+Vanilla.hud.hudContent().modify.controls.insertFront(
     UI.panel({
         anchor: Anchor.BottomMiddle,
         size: [180, 22],
@@ -52,6 +60,28 @@ Vanilla.hud.rootPanel().modify.controls.replace(
         invButton, {
             size: ["100%y", "100%"],
             anchor: Anchor.RightMiddle,
+        }
+    )
+).insertFront<UI<Types.Button>>(
+    invButton, {
+        ignored: "(not $endd_pcui_extra_buttons)",
+        size: ["100%y", "10%"],
+        anchor: Anchor.BottomRight,
+    }
+).insertFront(
+    UI.stackPanel({
+        ignored: "(not $endd_pcui_extra_buttons)",
+        orientation: Orientation.Horizontal,
+        size: ["100%c", "20%"],
+        anchor: Anchor.BottomRight,
+        offset: ["-10%", "-10%"],
+    }).addChild<Types.Button, UI<Types.Button>>(
+        HotbarLeftButton, {
+            size: ["100%y", "100%"],
+        }
+    ).addChild<Types.Button, UI<Types.Button>>(
+        hotbarRightButton, {
+            size: ["100%y", "100%"],
         }
     )
 )

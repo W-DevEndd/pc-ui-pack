@@ -1,4 +1,4 @@
-import { Modify, Types, UI, Vanilla } from "asajs";
+import { Button, MappingTo, Modify, Types, UI, Vanilla } from "asajs";
 
 // Scroll
 Vanilla.common.scrollingPanel_scrollTouch({ ignored: true });
@@ -42,5 +42,12 @@ export class UICommon {
                 texture: "textures/ui/focus_border_selected",
         }),
     0, "highlighted");
+
+    static quickInvsibleButton = (prssd_bttn_name: MappingTo, properties?: Button) => {
+        return this.invisibleButton.extend({}, {
+            "$pressed_button_name": prssd_bttn_name,
+            ...properties,
+        })
+    }
 
 }
