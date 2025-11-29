@@ -3,6 +3,7 @@ node_modules
 
 # Build Folders
 .minecraft
+.bedrock
 .build
 .save
 .tlist
@@ -10,6 +11,7 @@ dist
 
 # Build variables
 asakiyuki.env.cjs
+.venv
 
 # Compress package
 Minecraft-UIBuild.mcpack
