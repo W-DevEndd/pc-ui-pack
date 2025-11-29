@@ -42,6 +42,6 @@ readTlist(tlist, rls_assets);
 
 fs.writeFileSync(
     tlist_file_path,
-    JSON.stringify(t_list_file, null, 2),
+    JSON.stringify(t_list_file),
     { encoding: "utf-8" },
 );
