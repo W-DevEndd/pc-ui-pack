@@ -5,6 +5,7 @@ node_modules
 .minecraft
 .build
 .save
+.tlist
 dist
 
 # Build variables
