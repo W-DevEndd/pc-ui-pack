@@ -1,3 +1,5 @@
 
+RLS_ASSETS = ".release_assets"
+
 tlist:
-	node ./.scripts/make_tlist.cjs
+	node ./.scripts/build_tlist.cjs $(RLS_ASSETS)
