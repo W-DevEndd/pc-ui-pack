@@ -12,12 +12,14 @@ all: rls_assets
 dev: assets
 	node .scripts/dev_version.js true
 	yarn build
-	
 
 init:
 	yarn install
 	python -m venv .venv
 	$(PIP) install -r requirements.txt
+
+rls_assets: assets tlist
+	python ./.scripts/build_textures.py $(TLISTFILE) $(RLS_ASSETS) $(BEDROCK)
 
 assets:
 	rm -rf $(BEDROCK)
@@ -26,6 +28,3 @@ assets:
 
 tlist:
 	node ./.scripts/build_tlist.cjs $(RLS_ASSETS) $(TLISTFILE)
-
-rls_assets: assets tlist
-	python ./.scripts/build_textures.py $(TLISTFILE) $(RLS_ASSETS) $(BEDROCK)
