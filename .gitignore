@@ -12,7 +12,7 @@ dist
 # Build variables
 asakiyuki.env.cjs
 .venv
+is_dev_version.json
 
 # Compress package
 Minecraft-UIBuild.mcpack
-is_dev_version.json

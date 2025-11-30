@@ -9,6 +9,11 @@ all: rls_assets
 	node .scripts/dev_version.js false
 	yarn build
 
+dev: assets
+	node .scripts/dev_version.js true
+	yarn build
+	
+
 init:
 	yarn install
 	python -m venv .venv
