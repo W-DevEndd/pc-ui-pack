@@ -4,7 +4,7 @@ const path = require("node:path");
 const fs = require("node:fs");
 const { types } = require("node:util");
 
-const rls_assets = path.join(process.cwd(), process.argv[2]);
+const rls_assets = path.join(process.argv[2]);
 const tlist_file_path = path.join(process.cwd(), process.argv[3]);
 // console.log(rls_assets);
 
