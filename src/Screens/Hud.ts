@@ -70,7 +70,7 @@ Vanilla.hud.hudContent().modify.controls.insertFront(
     }
 ).insertFront(
     UI.stackPanel({
-        ignored: "(not $endd_pcui_extra_buttons)",
+        ignored: "(not $endd_pc_ui_dev_mode)",
         orientation: Orientation.Horizontal,
         size: ["100%c", "20%"],
         anchor: Anchor.BottomRight,
