@@ -1,7 +1,7 @@
 import { Anchor, MappingTo, UI, Vanilla } from "asajs";
 import { UICommon } from "../Common/UI";
 
-Vanilla.commandBlock.commandBlockScreenContent().modify.controls.insertFront(
+Vanilla.commandBlock.dividerContent().modify.controls.insertFront(
     UICommon.quickInvsibleButton(
         MappingTo.ChatAutocomplete, {
             ignored: "(not $endd_pcui_extra_buttons)",
