@@ -6,7 +6,7 @@ Vanilla.commandBlock.commandBlockScreenContent().modify.controls.insertFront(
         MappingTo.ChatAutocomplete, {
             ignored: "(not $endd_pcui_extra_buttons)",
             size: ["20%", "20%x"],
-            anchor: Anchor.BottomMiddle,
+            anchor: Anchor.TopMiddle,
             offset: [0, "20%"],
         }
     )
