@@ -25,6 +25,8 @@ export class UICommon {
         pressed_control: "highlighted",
         locked_control: "",
 
+        "$button_text|default": "",
+
         prevent_touch_input: true,
         sound_name: "none",
 
@@ -40,12 +42,18 @@ export class UICommon {
             UI.image({
                 ignored: "(not $endd_pc_ui_dev_mode)",
                 texture: "textures/ui/focus_border_selected",
-        }),
-    0, "highlighted");
+            }),
+            0, "highlighted").addChild(
+                UI.label({
+                    ignored: "(not $endd_pc_ui_dev_mode)",
+                    text: "$button_text",
+                })
+            );
 
     static quickInvsibleButton = (prssd_bttn_name: MappingTo, properties?: Button) => {
         return this.invisibleButton.extend({}, {
             "$pressed_button_name": prssd_bttn_name,
+            "$button_text": prssd_bttn_name,
             ...properties,
         })
     }
