@@ -7,7 +7,7 @@ Vanilla.commandBlock.commandBlockScreenContent().modify.controls.insertFront(
             ignored: "(not $endd_pcui_extra_buttons)",
             size: ["20%", "20%x"],
             anchor: Anchor.BottomMiddle,
-            offset: [0, "-100%c"],
+            offset: [0, "20%"],
         }
     )
 )
