@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "asajs": "^3.0.10"
+    "asajs": "^3.0.10",
+    "jsonc-parser": "^3.3.1"
   },
   "scripts": {
     "build": "tsc && node ./dist/cjs/app.js"

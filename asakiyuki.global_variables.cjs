@@ -1,18 +1,6 @@
-const fs = require("node:fs");
 const {} = require("asajs");
 
-let devVersion 
-try {
-    devVersion = require("./.is_dev_version.json");
-} catch {
-    devVersion = true;
-    fs.rmSync("./.is_dev_version.json", { recursive: true, force: true });
-    fs.writeFileSync(
-        "./.is_dev_version.json",
-        JSON.stringify(true),
-        { encoding: "utf-8" },
-    )
-}
+devVersion = require("./.is_dev_version.json");
 
 const global_variables = {
     endd_pc_ui_dev_mode: devVersion ? true : false,

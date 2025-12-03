@@ -8,21 +8,23 @@ const searchingChar = "action.interact";
 
 const interactTexts = [];
 
-const rl = readline.createInterface({
-    input: fs.createReadStream(langFile),
-    terminal: true,
-})
+const rl = readline.createInterface(
+    fs.createReadStream(langFile),
+    undefined,
+    undefined,
+    true,
+)
 
-rl.on("line", line => {
+rl.on("line", (line) => {
     if (line.includes(searchingChar)) {
-        text = line.split("=")[0];
+        const text = line.split("=")[0];
         interactTexts.push(text);
     }
 })
 
-rl.on("close", () => {});
-// rl.on("error", err => {
-//     console.log(err);
-// });
-
-console.log(JSON.stringify(interactTexts, null, 2));
+rl.on("close", () => {
+    console.log(JSON.stringify(interactTexts, null, 2));
+});
+rl.on("error", (err) => {
+    console.log(err);
+});
