@@ -13,5 +13,7 @@ files.forEach(file => {
     const fileExSplit = file.split(".");
     const fileExtension = fileExSplit[fileExSplit.length - 1];
     if (fileExtension === "lang")
-        console.log(file);
+        langFiles.push(file)
 })
+
+console.log(JSON.stringify(langFiles, null, 2));
