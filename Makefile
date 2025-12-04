@@ -7,32 +7,43 @@ TLISTFILE = ".tlist"
 LANGS = "minecraft_langs.jsonc"
 INTERACTS = "interact_texts.jsonc"
 
-all: rls_assets
-# 	node .scripts/dev_version.js false
-	yarn build
+# ---
+# Main
+# ---
 
-# dev: assets
-# 	node .scripts/dev_version.js true
-# 	yarn build
+all: assets
+	yarn build
 
 init:
 	yarn install
 	python -m venv .venv
 	$(PIP) install -r requirements.txt
 
-rls_assets: assets tlist
-	python ./.scripts/build_textures.py $(TLISTFILE) $(RLS_ASSETS) $(BEDROCK)
+# ---
+# Assets (.bedrock)
+# ---
 
-assets:
-	rm -rf $(BEDROCK)
-	mkdir -p $(BEDROCK)
-	cp -r .assets/* $(BEDROCK)
+assets: base_assets extra_textures interact
+
+# Textures
+extra_textures: tlist dev_version base_assets
+	python ./.scripts/build_textures.py $(TLISTFILE) $(RLS_ASSETS) $(BEDROCK)
 
 tlist:
 	node ./.scripts/build_tlist.cjs $(RLS_ASSETS) $(TLISTFILE)
 
-interact:
+# Langs
+interact: dev_version base_assets
 	node .scripts/build_lang.cjs $(LANGS) $(INTERACTS) $(BEDROCK)
 
+# ---
+# Base
+# ---
+
+base_assets:
+	rm -rf $(BEDROCK)
+	mkdir -p $(BEDROCK)
+	cp -r .assets/* $(BEDROCK)
+
 dev_version:
-	node .scripts/
+	node .scripts/dev_version.cjs
