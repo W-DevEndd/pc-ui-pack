@@ -6,7 +6,7 @@ const config = {
     compiler: {
         autoCompress: false,
         fileExtension: "class",
-        encodeJson: false,
+        encodeJson: true,
         UI: {
             nameLength: 32,
             namespaceAmount: 1,
