@@ -14,6 +14,10 @@ Initialization the project (create venv and install dependencies)
 make init
 ```
 
+Open Python virtual environment
+```
+source .venv/bin/activate
+```
 Build the UI pack
 ```
 make
