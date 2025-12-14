@@ -25,9 +25,10 @@ const config = {
     },
     manifest: {
         name: "Endd's PC UI [DEV]",
-        description: "Build with AsaJS <3",
-        baseGameVersion: [1, 21, 80],
-        version: [1, 0, 0],
+        description: `Make your minecraft UI (on mobile) look like on Desktop.
+        Build with AsaJS <3`,
+        baseGameVersion: [1, 21, 90],
+        version: [1, 1, 2],
     },
 };
 
